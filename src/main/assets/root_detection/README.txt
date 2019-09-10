@@ -1,0 +1,1 @@
+Copy here the "signature" file from the DIGIPASS for APPS folder-tree "/Root Detection SDK/Signature".

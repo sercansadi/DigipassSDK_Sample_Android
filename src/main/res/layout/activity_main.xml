@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.vasco.labs.digipasssdk_sample_android_2016.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/btnClear"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/lblSerial" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Sync"
+        android:id="@+id/btnTimeSync"
+        android:layout_below="@+id/btnClear"
+        android:layout_alignLeft="@+id/btnClear"
+        android:layout_alignStart="@+id/btnClear" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Geo"
+        android:id="@+id/btnGeo"
+        android:layout_below="@+id/btnTimeSync"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/btnTimeSync"
+        android:layout_alignStart="@+id/btnTimeSync" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/lblStatus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtStatus"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_alignBaseline="@+id/lblStatus"
+        android:layout_alignBottom="@+id/lblStatus"
+        android:layout_toRightOf="@+id/lblTimeShift"
+        android:layout_toEndOf="@+id/lblTimeShift" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serial"
+        android:id="@+id/lblSerial"
+        android:layout_below="@+id/lblStatus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSerial"
+        android:layout_below="@+id/txtStatus"
+        android:layout_alignLeft="@+id/txtStatus"
+        android:layout_alignStart="@+id/txtStatus" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Time Shift"
+        android:id="@+id/lblTimeShift"
+        android:layout_below="@+id/lblSerial"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtTimeShift"
+        android:layout_below="@+id/txtSerial"
+        android:layout_alignLeft="@+id/txtSerial"
+        android:layout_alignStart="@+id/txtSerial" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Loacation"
+        android:id="@+id/lblLocation"
+        android:layout_alignTop="@+id/txtLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtLocation"
+        android:layout_below="@+id/txtTimeShift"
+        android:layout_alignLeft="@+id/txtSerial"
+        android:layout_alignStart="@+id/txtSerial" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Rooted"
+        android:id="@+id/lblRooted"
+        android:layout_below="@+id/txtLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtRooted"
+        android:layout_below="@+id/txtLocation"
+        android:layout_alignLeft="@+id/txtLocation"
+        android:layout_alignStart="@+id/txtLocation" />
+
+    <Button
+        android:id="@+id/btnActivateDIGIPASS"
+        android:text="Activate DIGIPASS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/lblTimeShift"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnSecureChannelMessage"
+        android:layout_alignEnd="@+id/btnSecureChannelMessage" />
+
+    <Button
+        android:id="@+id/btnActivateDIGIPASS_2StepNoCroNoSC"
+        android:text="Activate DIGIPASS (2 Step, No Cro, No SC)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnActivateDIGIPASS"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnSecureChannelMessage"
+        android:layout_alignEnd="@+id/btnSecureChannelMessage" />
+
+    <Button
+        android:id="@+id/btnActivateDIGIPASS_Standard"
+        android:text="Activate DIGIPASS (STANDARD)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnActivateDIGIPASS_2StepNoCroNoSC"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnSecureChannelMessage"
+        android:layout_alignEnd="@+id/btnSecureChannelMessage" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="One Time Password"
+        android:id="@+id/btnOneTimePassword"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnActivateDIGIPASS_Standard"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/btnActivateDIGIPASS_Standard"
+        android:layout_alignEnd="@+id/btnActivateDIGIPASS_Standard" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Secure Channel Message"
+        android:id="@+id/btnSecureChannelMessage"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnOneTimePassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Challenge Response"
+        android:id="@+id/btnChallengeResponse"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnSecureChannelMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/btnActivateDIGIPASS"
+        android:layout_alignEnd="@+id/btnActivateDIGIPASS" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signature"
+        android:id="@+id/btnSignature"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnChallengeResponse"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/btnTimeSync"
+        android:layout_alignRight="@+id/btnChallengeResponse"
+        android:layout_alignEnd="@+id/btnChallengeResponse" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:id="@+id/btnNotification"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnSignature"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/btnTimeSync"
+        android:layout_alignRight="@+id/btnSignature"
+        android:layout_alignEnd="@+id/btnSignature" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Security"
+        android:id="@+id/btnSecurity"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnNotification"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/btnTimeSync"
+        android:layout_alignRight="@+id/btnSignature"
+        android:layout_alignEnd="@+id/btnSignature" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playground"
+        android:id="@+id/btnPlayGround"
+        android:layout_below="@+id/btnSecurity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnSecurity"
+        android:layout_alignEnd="@+id/btnSecurity" />
+
+</RelativeLayout>

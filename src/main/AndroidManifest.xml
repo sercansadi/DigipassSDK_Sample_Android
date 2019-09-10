@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vasco.labs.digipasssdk_sample_android_2016">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/vnd.com.vasco.notification.NOTIFICATION_ACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vasco.digipass.sdk.utils.qrcodescanner.QRCodeScannerSDKActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        //notification info
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="com.vasco.digipass.sdk.utils.notification.client.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.vasco.digipass.sdk.utils.notification.client" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.vasco.digipass.sdk.utils.notification.client.GcmIntentService" />
+
+        <activity android:name=".ActivateActivity" />
+        <activity android:name=".TwoStepNoCroNoSCActivateActivity" />
+        <activity android:name=".StandardActivateActivity" />
+        <activity android:name=".OTPActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="demoApp" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecureMessagingActivity" />
+        <activity android:name=".ChallengeResponseActivity" />
+        <activity android:name=".SignatureActivity" />
+        <activity android:name=".NotificiationActivity" />
+        <activity android:name=".SecurityActivity"></activity>
+    </application>
+
+</manifest>

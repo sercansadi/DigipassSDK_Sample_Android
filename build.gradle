@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.vasco.labs.digipasssdk_sample_android_2016"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary  'org.apache.http.legacy'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('src/main/libs/DigipassSDK.jar')
+    compile files('src/main/libs/UtilitiesSDK.jar')
+    compile files('src/main/libs/SecureStorageSDK.jar')
+    compile files('src/main/libs/DeviceBindingSDK.jar')
+    compile files('src/main/libs/SecureMessagingSDKClient.jar')
+    compile files('src/main/libs/GeolocationSDK.jar')
+    compile files('src/main/libs/RootDetectionSDK.jar')
+    compile files('src/main/libs/QRCodeScannerSDK.jar')
+    compile files('src/main/libs/NotificationSDKClient.jar')
+    compile files('src/main/libs/DSAPP_Client.jar')
+    compile files('src/main/libs/WBCSDK.jar')
+    compile files('src/main/libs/ShieldSDK.jar')
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile project(':OasisCSFaceClient')
+    compile files('src/main/libs/BiometricSensorSDK.jar')
+}

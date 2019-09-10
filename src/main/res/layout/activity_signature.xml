@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.vasco.labs.digipasssdk_sample_android_2016.SignatureActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPasswordSign"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Password" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signature"
+        android:id="@+id/btnSign"
+        android:layout_below="@+id/txtPasswordSign"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txtPasswordSign"
+        android:layout_alignEnd="@+id/txtPasswordSign" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF1"
+        android:layout_below="@+id/btnSign"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Datafield 1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF2"
+        android:hint="Datafield 2"
+        android:layout_below="@+id/btnSign"
+        android:layout_toRightOf="@+id/txtDTF1"
+        android:layout_toEndOf="@+id/txtDTF1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF3"
+        android:hint="Datafield 3"
+        android:layout_below="@+id/btnSign"
+        android:layout_toRightOf="@+id/txtDTF2"
+        android:layout_toEndOf="@+id/txtDTF2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF4"
+        android:hint="Datafield 4"
+        android:layout_below="@+id/txtDTF1"
+        android:layout_toLeftOf="@+id/txtDTF2"
+        android:layout_toStartOf="@+id/txtDTF2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF5"
+        android:hint="Datafield 5"
+        android:layout_below="@+id/txtDTF1"
+        android:layout_toRightOf="@+id/txtDTF4"
+        android:layout_toEndOf="@+id/txtDTF4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF6"
+        android:hint="Datafield 6"
+        android:layout_below="@+id/txtDTF2"
+        android:layout_toRightOf="@+id/txtDTF2"
+        android:layout_toEndOf="@+id/txtDTF2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF7"
+        android:hint="Datafield 7"
+        android:layout_alignTop="@+id/txtDTF8"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDTF8"
+        android:hint="Datafield 8"
+        android:layout_below="@+id/txtDTF5"
+        android:layout_alignLeft="@+id/txtDTF5"
+        android:layout_alignStart="@+id/txtDTF5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Signature"
+        android:id="@+id/lblSign"
+        android:layout_below="@+id/txtDTF8"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtSign"
+        android:layout_below="@+id/lblSign"
+        android:layout_alignRight="@+id/btnSign"
+        android:layout_alignEnd="@+id/btnSign"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hostcode"
+        android:id="@+id/lblHostcode"
+        android:layout_marginTop="71dp"
+        android:layout_below="@+id/txtSign"
+        android:layout_alignRight="@+id/lblSign"
+        android:layout_alignEnd="@+id/lblSign" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtHostcodeSign"
+        android:layout_below="@+id/lblHostcode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txtSign"
+        android:layout_alignEnd="@+id/txtSign" />
+</RelativeLayout>
