@@ -12,6 +12,6 @@ Home directory for the activiy classes for UI presentation of the functionality,
 ## test directories
 As most of the methods in project classes rely on Context object, test classes were not implemented at that time (there are only 2 mocks for Activity and DSAPP). The reason is for that the build API level is 23 and new library for tetsing Context object is introduced after API level 24: 
 
-'''
+```
 InstrumentationRegistry
-'''
+```
