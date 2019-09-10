@@ -1,6 +1,8 @@
 # DigipassSDK_Sample_Android
 This is the PoC Sample with DIGIPASS SDK to show Android capabilities of the product. The Android project includes several basic UI for the showcase of DigipassSDK, which provides multifactor authentication capabilities with symmetric key generation. establishing secure channel with DSAPP and integration of several OEM libraries such as face recognition or color QR code.
 
+!!! The code is meant to be written for PoC purposes; tried best to achieve a cleaner code, but tests are lacking as mentioned in the sections below !!!
+
 ## src directory
 
 ### digipass.sdk.utils.wbc
